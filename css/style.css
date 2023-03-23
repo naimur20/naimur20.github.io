@@ -15,7 +15,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: rgb(203, 22, 253);
 }
 
 html {
@@ -149,7 +149,7 @@ span {
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.6rem;
-  color: var(--second-bg-color);
+  color: var(--text-color);
   letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.5s ease;
@@ -157,6 +157,9 @@ span {
 
 .btn:hover {
   box-shadow: none;
+  color: var(--text-color);
+  background: transparent;
+  border: .1rem solid var(--text-color);
 }
 
 .about {

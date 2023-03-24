@@ -12,6 +12,13 @@
 }
 
 :root {
+  --bg-color: #fafafa;
+  --second-bg-color: #f1f0f0;
+  --text-color: #000000;
+  --main-color: rgb(203, 22, 253);
+}
+
+.darkMode {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
@@ -57,6 +64,13 @@ section {
   cursor: default;
 }
 
+#darkMode-icon {
+  padding: 0 1.5rem 0 2rem;
+  font-size: 2.6rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
 .navbar a {
   font-size: 1.7rem;
   color: var(--text-color);
@@ -73,6 +87,12 @@ section {
   font-size: 3.6rem;
   color: var(--text-color);
   display: none;
+}
+
+.header-right-portion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .home {
@@ -106,15 +126,15 @@ span {
 }
 
 @keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-2.4rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .home-content p {
@@ -159,7 +179,7 @@ span {
   box-shadow: none;
   color: var(--text-color);
   background: transparent;
-  border: .1rem solid var(--text-color);
+  border: 0.1rem solid var(--text-color);
 }
 
 .about {
@@ -235,7 +255,7 @@ span {
 }
 
 .portfolio {
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 
 .portfolio h2 {
@@ -255,6 +275,7 @@ span {
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   display: flex;
+  background: var(--second-bg-color);
 }
 
 .portfolio-box img {
@@ -439,6 +460,7 @@ span {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
+    text-align: center;
   }
 
   .home {
@@ -448,9 +470,14 @@ span {
   .home-content h3 {
     font-size: 2.6rem;
   }
-   .home-content h1 {
+  .home-content h1 {
     font-size: 5rem;
   }
+
+  /* .home-content {
+    align-items: center;
+    text-align: center;
+  } */
 
   .home-img img {
     width: 70vw;
@@ -480,8 +507,19 @@ span {
 }
 
 @media (max-width: 617px) {
-    .portfolio-container {
+  .portfolio-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
   }
 }
 
@@ -502,14 +540,5 @@ span {
 
   .about-img img {
     width: 90vw;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-  }
-
-  .footer p {
-    text-align: center;
-    margin-top: 2rem;
   }
 }

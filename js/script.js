@@ -1,9 +1,15 @@
 let menuIcon = document.querySelector('#menu-icon');
+let darkModeIcon = document.querySelector('#darkMode-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+};
+
+darkModeIcon.onclick = () => {
+    darkModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('darkMode');
 };
 
 let sections = document.querySelectorAll('section');
